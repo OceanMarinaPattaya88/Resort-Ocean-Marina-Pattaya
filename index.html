@@ -647,12 +647,12 @@
         </div>
     </main>
 
-    <div id="booking-bar" class="fixed bottom-0 left-0 right-0 bg-slate-900/98 backdrop-blur-xl text-white p-8 transform translate-y-full transition-all duration-700 z-[100] border-t border-orange-500">
+    <div id="booking-bar" class="fixed bottom-0 left-0 right-0 bg-slate-900/98 backdrop-blur-xl text-white p-8 transform translate-y-full transition-all duration-700 z-[100] border-t border-[#334290]">
         <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-4">
-                <button onclick="clearCart()" class="text-xs text-red-400 hover:underline">ล้างทั้งหมด</button>
+                <button onclick="clearCart()" class="text-xs text-[#334290] hover:underline">ล้างทั้งหมด</button>
                 <div>
-                    <h4 class="font-black text-xl text-orange-400 uppercase tracking-tight" id="summary-name">VILLA SELECTED</h4>
+                    <h4 class="font-black text-xl text-[#334290] uppercase tracking-tight" id="summary-name">Selected room</h4>
                     <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="summary-info">CHECK DETAILS BEFORE PROCEEDING</p>
                 </div>
             </div>
@@ -661,7 +661,7 @@
                     <p class="text-[10px] font-bold text-slate-500 uppercase">Grand Total</p>
                     <p class="text-4xl font-black text-white" id="summary-total">฿0</p>
                 </div>
-                <button onclick="toggleModal(true)" class="bg-orange-500 text-white px-12 py-5 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-orange-600 transition-all shadow-lg">Confirm Booking</button>
+                <button onclick="toggleModal(true)" class="bg-[#334290] text-white px-12 py-5 rounded-xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-[#334290] transition-all shadow-lg">Confirm Booking</button>
             </div>
         </div>
     </div>
@@ -671,17 +671,18 @@
             <h2 class="text-2xl font-black text-slate-800 uppercase mb-1">Booking Details</h2>
             <div class="space-y-6 mt-8">
                 <div>
-                    <label class="fac-label block mb-2 text-orange-600">Full Name</label>
-                    <input type="text" id="user-name" placeholder="Enter your name" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-orange-500 transition-all">
+                    <label class="fac-label block mb-2 text-[#334290]">Full Name</label>
+                    <input type="text" id="user-name" placeholder="Enter your name" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-[#334290] transition-all">
                 </div>
                 <div>
-                    <label class="fac-label block mb-2 text-orange-600">Phone Number</label>
-                    <input type="tel" id="user-phone" maxlength="10" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="08XXXXXXXX" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-orange-500 transition-all">
+                    <label class="fac-label block mb-2 text-[#334290]">Phone Number</label>
+                    <input type="tel" id="user-phone" maxlength="10" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="08XXXXXXXX" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-[#334290] transition-all">
                 </div>
             </div>
             <div class="flex gap-3 mt-10 border-t pt-8">
                 <button onclick="toggleModal(false)" class="flex-1 py-4 font-bold uppercase text-xs text-slate-400">Cancel</button>
-                <button onclick="sendToDiscord()" class="flex-[2] py-4 bg-slate-900 text-white rounded-xl font-bold uppercase text-xs tracking-widest"> Send Booking </button>
+                <button onclick="sendToDiscord()" class="flex-[2] py-4 bg-[#334290] text-white rounded-xl font-bold uppercase text-xs tracking-widest"> Send Booking </button>
+            </div>
         </div>
     </div>
 
