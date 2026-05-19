@@ -5,140 +5,310 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>The Sea House Angsila Bangsaen | EXCLUSIVE BOOKING SYSTEM</title>
+    <title>Resort Ocean Marinat Pattaya | EXCLUSIVE BOOKING SYSTEM</title>
     
     <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/1X4g65H1/283421457-721859565750606-4910418313716411911-n.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <style>
-        body { font-family: 'IBM Plex Sans Thai', sans-serif; background-color: #f1f5f9; color: #1e293b; }
-        h1, h2, h3, .logo-font { font-family: 'Cinzel', serif; }
-        .promo-banner { background: linear-gradient(90deg, #334290 0%, #334290 100%); }
-        .room-card { 
-            transition: all 0.4s ease; 
-            border: 1px solid #cbd5e1; 
-            display: flex; 
-            flex-direction: column; 
-            overflow: hidden; 
-            border-radius: 2rem; 
-            background-color: white; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .room-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); 
-            border-color: #64748b; 
-        }
-        .discount-badge { 
-            background: #334290; 
-            color: white; 
-            padding: 8px 16px; 
-            border-radius: 12px; 
-            font-weight: 900; 
-            font-size: 14px; 
-            z-index: 20; 
-            box-shadow: 0 4px 12px rgba(51, 66, 144, 0.4); 
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-        .fac-label { font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
-        .fac-value { font-size: 13px; font-weight: 500; color: #334155; margin-bottom: 4px; }
-        .btn-booking { background: #1e293b; transition: all 0.3s ease; border-radius: 1rem; }
-        .btn-booking:hover { background: #334290; transform: scale(1.02); }
-        .slider-container { position: relative; overflow: hidden; width: 100%; height: 450px; border-bottom: 1px solid #e2e8f0; background: #000; }
-        .slider-wrapper { display: flex; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); height: 100%; }
-        .slider-item { min-width: 100%; height: 100%; object-fit: cover; }
-        .nav-btn { background: rgba(255,255,255,0.8); backdrop-filter: blur(4px); width: 45px; height: 45px; border-radius: 50%; font-weight: bold; transition: all 0.3s; }
-        .nav-btn:hover { background: #fff; transform: scale(1.1); }
-        .date-input, .select-input { border: 1px solid #cbd5e1; background: #f8fafc; padding: 10px; border-radius: 12px; font-weight: 600; font-size: 12px; outline: none; }
-        .amenity-tag { display: flex; flex-direction: column; border-left: 2px solid #e2e8f0; padding-left: 10px; margin-bottom: 8px; }
+ <style>
+    body {
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+        background:
+            radial-gradient(circle at top right, rgba(51,66,144,0.25), transparent 30%),
+            radial-gradient(circle at bottom left, rgba(255,180,80,0.15), transparent 25%),
+            linear-gradient(135deg, #1f2750 0%, #334290 40%, #1f295c 100%);
+        color: #f8fafc;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
 
-        /* Extra Bed Styles */
-        .extra-bed-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border: 1.5px solid #bae6fd;
-            border-radius: 16px;
-            padding: 14px 18px;
-            margin-top: 16px;
-        }
-        .extra-bed-section.orange-theme {
-            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-            border-color: #334290;
-        }
-        .extra-bed-label {
-            font-size: 10px;
-            font-weight: 800;
-            color: #0369a1;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .extra-bed-label.orange { color: #334290; }
-        .extra-bed-controls {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            background: white;
-            border: 1.5px solid #bae6fd;
-            border-radius: 12px;
-            overflow: hidden;
-            width: fit-content;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
-        .extra-bed-controls.orange-border { border-color: #334290; }
-        .bed-btn {
-            width: 38px;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 900;
-            cursor: pointer;
-            background: transparent;
-            border: none;
-            color: #334290;
-            transition: all 0.2s;
-            user-select: none;
-        }
-        .bed-btn.orange { color: #334290; }
-        .bed-btn:hover:not(:disabled) { background: #e0f2fe; }
-        .bed-btn.orange:hover:not(:disabled) { background: #334290; }
-        .bed-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-        .bed-count {
-            min-width: 44px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 900;
-            color: #1e293b;
-            border-left: 1.5px solid #bae6fd;
-            border-right: 1.5px solid #bae6fd;
-            height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .bed-count.orange-border { border-color: #334290; }
-        .extra-bed-info {
-            font-size: 11px;
-            color: #64748b;
-            margin-top: 8px;
-            font-weight: 500;
-        }
-        .extra-bed-cost {
-            font-size: 12px;
-            font-weight: 800;
-            color: #0369a1;
-            margin-top: 4px;
-        }
-        .extra-bed-cost.orange { color: #334290; }
-    </style>
-</head>
+    h1, h2, h3, .logo-font {
+        font-family: 'Cinzel', serif;
+    }
+
+    .promo-banner {
+        background: linear-gradient(90deg, #ffffff 0%, #1e3a8a 100%);
+        box-shadow: 0 10px 30px rgba(51,66,144,0.4);
+    }
+
+    .room-card {
+        transition: all 0.4s ease;
+        border: 1px solid rgba(255, 255, 255, 0.192);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 2rem;
+        background: rgba(75, 70, 70, 0.05);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .room-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(255, 255, 255, 0.45);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .discount-badge {
+        background: linear-gradient(135deg, #334290 0%, #647cff 100%);
+        color: white;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: 13px;
+        z-index: 20;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+        animation: pulse 2s infinite;
+        backdrop-filter: blur(10px);
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .fac-label {
+        font-size: 10px;
+        font-weight: 700;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .fac-value {
+        font-size: 13px;
+        font-weight: 500;
+        color: #f8fafc;
+        margin-bottom: 4px;
+    }
+
+    .btn-booking {
+        background: linear-gradient(135deg, #3b5ac2 0%, #334290 100%);
+        transition: all 0.3s ease;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(51,66,144,0.4);
+    }
+
+    .btn-booking:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 40px rgba(51,66,144,0.6);
+    }
+
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 450px;
+        background: #000;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        height: 100%;
+    }
+
+    .slider-item {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nav-btn {
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        transition: all 0.3s;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .nav-btn:hover {
+        background: rgba(255,255,255,0.25);
+        transform: scale(1.1);
+    }
+
+    .date-input,
+    .select-input {
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.05);
+        color: white;
+        padding: 12px;
+        border-radius: 14px;
+        font-weight: 600;
+        font-size: 12px;
+        outline: none;
+        backdrop-filter: blur(10px);
+    }
+
+    .amenity-tag {
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid rgba(255,255,255,0.1);
+        padding-left: 12px;
+        margin-bottom: 10px;
+    }
+
+    /* Extra Bed Premium */
+
+    .extra-bed-section {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 16px 20px;
+        margin-top: 20px;
+    }
+
+    .extra-bed-section.orange-theme {
+        border-color: rgba(31, 31, 32, 0.5);
+        background: rgba(248, 248, 248, 0.08);
+    }
+
+    .extra-bed-label {
+        font-size: 11px;
+        font-weight: 800;
+        color: #cbd5e1;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .extra-bed-label.orange {
+        color: #93c5fd;
+    }
+
+    .extra-bed-controls {
+        display: flex;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 14px;
+        overflow: hidden;
+        width: fit-content;
+    }
+
+    .bed-btn {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 900;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        transition: all 0.2s;
+    }
+
+    .bed-btn:hover:not(:disabled) {
+        background: rgba(255, 254, 254, 0.08);
+    }
+
+    .bed-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    .bed-count {
+        min-width: 50px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 900;
+        color: white;
+        border-left: 1px solid rgba(255,255,255,0.08);
+        border-right: 1px solid rgba(255,255,255,0.08);
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .extra-bed-info {
+        font-size: 11px;
+        color: #cbd5e1;
+        margin-top: 8px;
+        font-weight: 500;
+    }
+
+    .extra-bed-cost {
+        font-size: 13px;
+        font-weight: 800;
+        color: #93c5fd;
+        margin-top: 4px;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+        background:
+            radial-gradient(circle at top right, rgba(51,66,144,0.25), transparent 30%),
+            radial-gradient(circle at bottom left, rgba(255,180,80,0.15), transparent 25%),
+            linear-gradient(135deg, #1f2750 0%, #334290 40%, #1f295c 100%);
+        color: #f8fafc;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* PRICE BOX */
+
+    .price-box{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(14px);
+
+    padding:12px 20px;
+    border-radius:18px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.price-main{
+    font-size:38px;
+    font-weight:900;
+    color:white;
+}
+
+.price-night{
+    font-size:12px;
+    color:rgba(255,255,255,0.7);
+}
+
+.select-input{
+    border-radius:100px;
+}
+
+.select-input option{
+    background:#2c376f;
+    color:white;
+    border-radius:14px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+    cursor: pointer;
+}
+.promo-banner{
+    background: linear-gradient(
+        90deg,
+        #334290 0%,
+        #6c7ccc 45%,
+        #5c6cbd 100%
+    );
+}
+</style>
+
 <body class="pb-40">
 
     <div class="promo-banner text-white text-center py-2 text-[10px] font-bold tracking-[0.2em] uppercase">
@@ -178,8 +348,8 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">🌊 Deluxe Room</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">Deluxe Room • สำหรับ 2-3 ท่าน</p>
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">🌊 Deluxe Room</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Deluxe Room • สำหรับ 2-3 ท่าน</p>
                             
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Room size</span><span class="fac-value"> 33m² </span></div>
@@ -217,11 +387,23 @@
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v1" onchange="updatePrice('v1')" class="date-input"></div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v1">฿1,980</span> <span class="text-xs text-slate-400" id="night-v1">/ Night</span></p>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v1"></p>
-                        </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v1">
+                ฿1,980
+            </span>
+
+            <span class="price-night" id="night-v1">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v1"></p>
+
+    </div>
+
                         <button onclick="book('v1', '🌊 Deluxe Room')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
@@ -244,8 +426,8 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">🌅 Premier Room</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">Premier Room ห้องนอนสำหรับ 2-4 ท่าน</p>
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">🌅 Premier Room</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Premier Room • ห้องนอนสำหรับ 2-4 ท่าน</p>
                             
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value"> 45m²  </span></div>
@@ -284,11 +466,22 @@
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v2" onchange="updatePrice('v2')" class="date-input"></div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v2">฿2,280</span> <span class="text-xs text-slate-400" id="night-v2">/ Night</span></p>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v2"></p>
-                        </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v2">
+                ฿2,280
+            </span>
+
+            <span class="price-night" id="night-v2">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v2"></p>
+
+    </div>
                         <button onclick="book('v2', '🌅 Premier Room')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
@@ -313,9 +506,9 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">✨Premier Balcony</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">Premier Balcony ห้องนอนสำหรับ 2-4 ท่าน</p>
-                            
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">✨Premier Balcony</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Premier Balcony • ห้องนอนสำหรับ 2-4 ท่าน</p>
+
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value"> 52m²</span></div>
                                 <div class="amenity-tag"><span class="fac-label">Bathroom</span><span class="fac-value">Fully equipped bathroom</span></div>
@@ -355,15 +548,17 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v3">฿2,700</span> <span class="text-xs text-slate-400" id="night-v3">/ Night</span></p>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v3"></p>
+                            <div class="price-box">
+    <span class="price-main" id="price-v3">฿2,700</span>
+    <span class="price-night">/ Night</span>
+                        </div>
                         </div>
                         <button onclick="book('v3', '✨ Premier Balcony')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
 
-            <!-- 🌤 Junior Suite -->
+            <!-- 🚀 Junior Suite -->
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge">SAVE 40%</div>
                 <div class="slider-container">
@@ -382,8 +577,8 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">🌤 Junior Suite</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">🌤 Junior Suite ห้องนอน สำหรับ 2-4 ท่าน</p>
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">🚀 Junior Suite</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Junior Suite • ห้องนอน สำหรับ 2-4 ท่าน</p>
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value">51m²</span></div>
                                 <div class="amenity-tag"><span class="fac-label">Bathroom</span><span class="fac-value">Fully equipped bathroom</span></div>
@@ -423,10 +618,12 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v4">฿3,300</span> <span class="text-xs text-slate-400" id="night-v4">/ Night</span></p>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v4"></p>
+                            <div class="price-box">
+    <span class="price-main" id="price-v4">฿3,300</span>
+    <span class="price-night">/ Night</span>
                         </div>
-                        <button onclick="book('v4', '🌤 Junior Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        </div>
+                        <button onclick="book('v4', '🚀 Junior Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -454,9 +651,9 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">👑 Marina Front Suite</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">Marina Front Suite ห้องนอน สำหรับ 2-4 ท่าน</p>
-                            
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">👑 Marina Front Suite</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Marina Front Suite • ห้องนอน สำหรับ 2-4 ท่าน</p>
+
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value">62m²</span></div>
                                 <div class="amenity-tag"><span class="fac-label">Bathroom</span><span class="fac-value">Fully equipped bathroom</span></div>
@@ -496,7 +693,10 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v5">฿3,840</span> <span class="text-xs text-slate-400" id="night-v5">/ Night</span></p>
+                            <div class="price-box">
+                                <span class="price-main" id="price-v5">฿3,840</span>
+                                <span class="price-night">/ Night</span>
+                            </div>
                             <p class="text-xs text-slate-400 mt-1" id="bed-summary-v5"></p>
                         </div>
                         <button onclick="book('v5', '👑 Marina Front Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
@@ -524,8 +724,8 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">🌕 2 Bedroom Suite (1 King & 2 Twin)</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">2 Bedroom Suite (1 King & 2 Twin) • 2 ห้องนอน สำหรับ 4-6 ท่าน</p>
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">🌕 2 Bedroom Suite (1 King & 2 Twin)</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">2 Bedroom Suite (1 King & 2 Twin) • 2 ห้องนอน สำหรับ 4-6 ท่าน</p>
 
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value">104m²</span></div>
@@ -566,7 +766,10 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v6">฿4,200</span> <span class="text-xs text-slate-400" id="night-v6">/ Night</span></p>
+                            <div class="price-box">
+                                <span class="price-main" id="price-v6">฿4,200</span>
+                                <span class="price-night">/ Night</span>
+                            </div>
                             <p class="text-xs text-slate-400 mt-1" id="bed-summary-v6"></p>
                         </div>
                         <button onclick="book('v6', '🌕 2 Bedroom Suite (1 King & 2 Twin)')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
@@ -594,8 +797,8 @@
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
                         <div class="flex-1">
-                            <h3 class="text-3xl font-bold text-slate-800 uppercase tracking-tight">💎 Family Suite Balcony</h3>
-                            <p class="text-xs font-bold text-[#334290] mt-1 mb-6 uppercase tracking-widest">💎 Family Suite Balcony • 2 ห้องนอน สำหรับ 4-6 ท่าน</p>
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">💎 Family Suite Balcony</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">Family Suite Balcony • 2 ห้องนอน สำหรับ 4-6 ท่าน</p>
 
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
                                 <div class="amenity-tag"><span class="fac-label">Bedroom</span><span class="fac-value">Master suite, King-sized bed</span></div>
@@ -636,7 +839,10 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="text-4xl font-black text-slate-900"><span id="price-v7">฿4,680</span> <span class="text-xs text-slate-400" id="night-v7">/ Night</span></p>
+                            <div class="price-box">
+                                <span class="price-main" id="price-v7">฿4,680</span>
+                                <span class="price-night">/ Night</span>
+                            </div>
                             <p class="text-xs text-slate-400 mt-1" id="bed-summary-v7"></p>
                         </div>
                         <button onclick="book('v7', 'Family Suite Balcony')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
@@ -650,7 +856,7 @@
     <div id="booking-bar" class="fixed bottom-0 left-0 right-0 bg-slate-900/98 backdrop-blur-xl text-white p-8 transform translate-y-full transition-all duration-700 z-[100] border-t border-[#334290]">
         <div class="container mx-auto max-w-5xl flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-4">
-                <button onclick="clearCart()" class="text-xs text-[#334290] hover:underline">ล้างทั้งหมด</button>
+                <button onclick="clearCart()" class="text-xs text-[#000000] hover:underline">ล้างทั้งหมด</button>
                 <div>
                     <h4 class="font-black text-xl text-[#334290] uppercase tracking-tight" id="summary-name">Selected room</h4>
                     <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="summary-info">CHECK DETAILS BEFORE PROCEEDING</p>
