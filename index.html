@@ -888,11 +888,11 @@ input{
             <div class="space-y-6 mt-8">
                 <div>
                     <label class="fac-label block mb-2 text-[#334290]">Full Name</label>
-                    <input type="text" id="user-name" placeholder="Enter your name" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-[#334290] transition-all">
+                    <input type="text" id="user-name" placeholder="Enter your name" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold text-slate-800 outline-none focus:border-[#334290] transition-all">
                 </div>
                 <div>
                     <label class="fac-label block mb-2 text-[#334290]">Phone Number</label>
-                    <input type="tel" id="user-phone" maxlength="10" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="08XXXXXXXX" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold outline-none focus:border-[#334290] transition-all">
+                    <input type="tel" id="user-phone" maxlength="10" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="08XXXXXXXX" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl font-bold text-slate-800 outline-none focus:border-[#334290] transition-all">
                 </div>
             </div>
             <div class="flex gap-3 mt-10 border-t pt-8">
@@ -1007,7 +1007,7 @@ input{
                     const guestSelect = document.getElementById('guest-' + id);
                     const guestText = guestSelect.options[guestSelect.selectedIndex].text.split(' ')[0] + " ท่าน";
                     bookingCart[existingIndex] = {
-                        villaName: name,
+                        roomName: name,
                         guests: guestText,
                         nights: nights,
                         checkIn: cin,
