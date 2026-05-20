@@ -17,16 +17,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Verification | The Marine Villas</title>
+    <title>Payment Verification | Ocean Marina</title>
     <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/1X4g65H1/283421457-721859565750606-4910418313716411911-n.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', 'IBM Plex Sans Thai', sans-serif; background-color: #0f172a; color: white; }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.08); }
-        .gradient-text { background: linear-gradient(135deg, #31419b 0%, #f16b2b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Inter', 'IBM Plex Sans Thai', sans-serif; background-color: #242e63; color: white; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid #242e63; }
+        .gradient-text { background: linear-gradient(135deg, #242e63 0%, #973304 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .info-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .memo-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .memo-box { background: #242e63; border: 1px solid #242e63; }
         .copy-btn:active { transform: scale(0.95); }
     </style>
 </head>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <a href="https://www.facebook.com/profile.php?id=61550589080761" target="_blank" class="block w-full bg-[#1877F2] text-white py-4 rounded-[1.8rem] font-bold text-[15px] text-center shadow-lg hover:opacity-90 transition-all">แจ้งพนักงานเพื่อรับใบเสร็จ</a>
+                <a href="https://www.facebook.com/profile.php?id=61550589080761" target="_blank" class="block w-full bg-[#242e63] text-white py-4 rounded-[1.8rem] font-bold text-[15px] text-center shadow-lg hover:opacity-90 transition-all">แจ้งพนักงานเพื่อรับใบเสร็จ</a>
                 <a href="index.html" 
 class="block w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-[1.8rem] font-bold text-[15px] text-center shadow-lg hover:scale-105 transition-all duration-300">
 Return to Booking
@@ -117,7 +117,7 @@ Return to Booking
         const params = new URLSearchParams(window.location.search);
         const priceValue = params.get('price') || "0";
         const customerName = params.get('cust') || "Guest";
-        const villaName = params.get('villa') || "Standard Room";
+        const roomName = params.get('Room') || "Standard Room";
         let finalBookingID = "";
         let finalOrderID = "";
 
@@ -191,9 +191,9 @@ Return to Booking
                         { name: "🆔 Booking ID", value: finalBookingID, inline: true },
                         { name: "📦 Order No", value: finalOrderID, inline: true },
                         { name: "👤 ผู้จอง (URL)", value: customerName, inline: false },
-                        { name: "🏠 วิลล่า (URL)", value: villaName, inline: true },
+                        { name: "🏠 ห้องพัก (URL)", value: roomName, inline: true },
                         { name: "💵 ยอดเงิน", value: document.getElementById('display-price').innerText + " บาท", inline: true },
-                        { name: "⚠️ หมายเหตุ", value: "ประกันห้อง 2,500 บาท", inline: false }
+                        { name: "⚠️ หมายเหตุ", value: "ประกันห้อง 1,500 บาท", inline: false }
                     ],
                     timestamp: new Date()
                 }]
