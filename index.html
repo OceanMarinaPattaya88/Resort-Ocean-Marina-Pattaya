@@ -1099,13 +1099,13 @@ input{
             if(!userName || phone.length < 10) return alert("กรอกข้อมูลให้ครบถ้วน!");
             
             let grandTotal = 0;
-            let villaDetails = "";
-            let firstVilla = bookingCart[0].RoomName;
+            let RoomDetails = "";
+            let afirstroom = bookingCart[0].RoomName;
 
             bookingCart.forEach((item, i) => {
                 grandTotal += item.totalPrice;
                 const bedNote = item.extraBeds > 0 ? ` | เสริมเตียง ${item.extraBeds} ท่าน` : '';
-                villaDetails += `\n🏠 ${i+1}. ${item.RoomName}\n   └ ${item.guests}${bedNote} | ${item.nights} คืน | ฿${item.totalPrice.toLocaleString()}\n   └ Check-in: ${item.checkIn} | Out: ${item.checkOut}\n`;
+                RoomDetails += `\n🏠 ${i+1}. ${item.RoomName}\n   └ ${item.guests}${bedNote} | ${item.nights} คืน | ฿${item.totalPrice.toLocaleString()}\n   └ Check-in: ${item.checkIn} | Out: ${item.checkOut}\n`;
             });
 
             const webhookUrl = "https://discord.com/api/webhooks/1484826014004805702/Cw74m0BTseoIrxwy7FcWEZ-LGbSJxP4NBySHcP_SMNc9Ok52gBBpiRAq4fIY3hlVL0T6";
@@ -1117,7 +1117,7 @@ input{
                     fields: [
                         { name: "👤 ชื่อลูกค้า", value: userName, inline: true },
                         { name: "📞 เบอร์โทรศัพท์", value: phone, inline: true },
-                        { name: "📋 รายละเอียดการจอง", value: "```" + villaDetails + "```" },
+                        { name: "📋 รายละเอียดการจอง", value: "```" + RoomDetails + "```" },
                         { name: "💰 ยอดรวมทั้งสิ้น", value: `฿${grandTotal.toLocaleString()}`, inline: true }
                     ],
                     timestamp: new Date(),
