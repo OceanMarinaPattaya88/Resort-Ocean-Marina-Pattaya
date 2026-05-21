@@ -1235,7 +1235,7 @@ input{
             let grandTotal = 0;
             bookingCart.forEach(item => { grandTotal += item.totalPrice; });
 
-            document.getElementById('summary-name').innerText = `เลือกแล้ว ${bookingCart.length} วิลล่า`;
+            document.getElementById('summary-name').innerText = `เลือกแล้ว ${bookingCart.length}ห้อง`;
             document.getElementById('summary-info').innerText = "ราคาสรุปจะอัปเดตตามวันที่เลือกปัจจุบัน";
             document.getElementById('summary-total').innerText = `฿${grandTotal.toLocaleString()}`;
             document.getElementById('booking-bar').classList.remove('translate-y-full');
