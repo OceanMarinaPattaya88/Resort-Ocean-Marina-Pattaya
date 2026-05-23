@@ -340,11 +340,381 @@ input{
     <main class="container mx-auto max-w-5xl px-4 py-12">
         <div class="grid grid-cols-1 gap-16">
             
+            <!--SEA OF LOVE-->
+            <div class="room-card relative">
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="slider-v1">
+                        <img src="https://i.postimg.cc/GpxMV60J/6.png" class="slider-item">
+                        <img src="https://i.postimg.cc/J7sh7LTj/5599.png" class="slider-item">
+                    </div>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v1', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v1', 1)">❯</button>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">SEA OF LOVE</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">SEA OF LOVE • package 2 - 3 ท่าน</p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
+                                <div class="amenity-tag"><span class="fac-label">Room</span><span class="fac-value">( Premier Balcony )</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">3 Meals Included</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Seafood Voucher ฿3,000</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">1 Hr Thai Massage</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Two free drinks per person (Alternative Beverage Available)</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Choose one activity (travel accident insurance included)</span></div>
+                            </div>
+
+                            <!-- Extra Bed -->
+                            <div class="extra-bed-section">
+                                <div class="extra-bed-label">( มีเตียงเสริมให้ฟรี 1 เตียง )</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="extra-bed-controls">
+                                        <button class="bed-btn" onclick="changeBed('v1', -1)" id="bed-minus-v1" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v1">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v1', 1)" id="bed-plus-v1">+</button>
+                                    </div>
+                                    <div>
+                                        <div class="extra-bed-info">ฟรี 1 เตียง</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v1">฿0 / คืน</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 items-end">
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
+                                <select id="guest-v1" onchange="updatePrice('v1')" class="select-input">
+                                    <option value="5599">2 - 4 ท่าน 5,599.-</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v1" onchange="updatePrice('v1')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v1" onchange="updatePrice('v1')" class="date-input"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v1">
+                ฿5,599
+            </span>
+
+            <span class="price-night" id="night-v1">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v1"></p>
+
+    </div>
+
+                        <button onclick="book('v1', 'SEA OF LOVE')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!--SMILE OF THE SEA-->
+            <div class="room-card relative">
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="slider-v2">
+                        <img src="https://i.postimg.cc/GpxMV60J/6.png" class="slider-item">
+                        <img src="https://i.postimg.cc/8k7CkSym/5999.png" class="slider-item">
+                    </div>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v2', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v2', 1)">❯</button>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">SMILE OF THE SEA</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">SMILE OF THE SEA • package 2 - 3 ท่าน</p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
+                                <div class="amenity-tag"><span class="fac-label">Room</span><span class="fac-value">( Junior Suite )</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">3 Meals Included</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Seafood Voucher ฿4,000</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">1 Hr Thai Massage</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Two free drinks per person (Alternative Beverage Available)</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Choose two activity (travel accident insurance included)</span></div>
+                            </div>
+
+                            <!-- Extra Bed -->
+                            <div class="extra-bed-section">
+                                <div class="extra-bed-label">( มีเตียงเสริมให้ฟรี 1 เตียง )</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="extra-bed-controls">
+                                        <button class="bed-btn" onclick="changeBed('v2', -1)" id="bed-minus-v2" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v2">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v2', 1)" id="bed-plus-v2">+</button>
+                                    </div>
+                                    <div>
+                                        <div class="extra-bed-info">ฟรี 1 เตียง</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v2">฿0 / คืน</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 items-end">
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
+                                <select id="guest-v2" onchange="updatePrice('v2')" class="select-input">
+                                    <option value="5999">2 - 4 ท่าน 5,999.-</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v2" onchange="updatePrice('v2')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v2" onchange="updatePrice('v2')" class="date-input"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v2">
+                ฿5,999
+            </span>
+
+            <span class="price-night" id="night-v2">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v2"></p>
+
+    </div>
+
+                        <button onclick="book('v2', 'SMILE OF THE SEA')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--SEASIDE SERENITY-->
+            <div class="room-card relative">
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="slider-v3">
+                        <img src="https://i.postimg.cc/GpxMV60J/6.png" class="slider-item">
+                        <img src="https://i.postimg.cc/9XDfXhxG/6599.png" class="slider-item">
+                    </div>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v3', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v3', 1)">❯</button>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">SEASIDE SERENITY</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">SEASIDE SERENITY • package 2 - 3 ท่าน</p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
+                                <div class="amenity-tag"><span class="fac-label">Room</span><span class="fac-value">( Marina Front Suite )</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">3 Meals Included</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Seafood Voucher ฿6,000</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">1 Hr Thai Massage</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Two free drinks per person (Alternative Beverage Available)</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Choose three activity (travel accident insurance included)</span></div>
+                            </div>
+
+                            <!-- Extra Bed -->
+                            <div class="extra-bed-section">
+                                <div class="extra-bed-label">( มีเตียงเสริมให้ฟรี 1 เตียง )</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="extra-bed-controls">
+                                        <button class="bed-btn" onclick="changeBed('v3', -1)" id="bed-minus-v3" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v3">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v3', 1)" id="bed-plus-v3">+</button>
+                                    </div>
+                                    <div>
+                                        <div class="extra-bed-info">ฟรี 1 เตียง</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v3">฿0 / คืน</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 items-end">
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
+                                <select id="guest-v3" onchange="updatePrice('v3')" class="select-input">
+                                    <option value="6599">2 - 4 ท่าน 6,599.-</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v3" onchange="updatePrice('v3')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v3" onchange="updatePrice('v3')" class="date-input"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v3">
+                ฿6,599
+            </span>
+
+            <span class="price-night" id="night-v3">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v3"></p>
+
+    </div>
+
+                        <button onclick="book('v3', 'SEASIDE SERENITY')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--FAMILY PARADISE-->
+            <div class="room-card relative">
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="slider-v4">
+                        <img src="https://i.postimg.cc/GpxMV60J/6.png" class="slider-item">
+                        <img src="https://i.postimg.cc/bYZvYh6x/7599.png" class="slider-item">
+                    </div>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v4', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v4', 1)">❯</button>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">FAMILY PARADISE</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">FAMILY PARADISE • package 4 - 6 ท่าน</p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
+                                <div class="amenity-tag"><span class="fac-label">Room</span><span class="fac-value">( 2 Bedroom Suite )</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">3 Meals Included</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Seafood Voucher ฿7,000</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">1 Hr Thai Massage</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Two free drinks per person (Alternative Beverage Available)</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Choose four activity (travel accident insurance included)</span></div>
+                            </div>
+
+                            <!-- Extra Bed -->
+                            <div class="extra-bed-section">
+                                <div class="extra-bed-label">( มีเตียงเสริมให้ฟรี 2 เตียง )</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="extra-bed-controls">
+                                        <button class="bed-btn" onclick="changeBed('v4', -1)" id="bed-minus-v4" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v4">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v4', 1)" id="bed-plus-v4">+</button>
+                                    </div>
+                                    <div>
+                                        <div class="extra-bed-info">ฟรี 2 เตียง</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v4">฿0 / คืน</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 items-end">
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
+                                <select id="guest-v4" onchange="updatePrice('v4')" class="select-input">
+                                    <option value="7599">4 - 6 ท่าน 7,599.-</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v4" onchange="updatePrice('v4')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v4" onchange="updatePrice('v4')" class="date-input"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v4">
+                ฿7,599
+            </span>
+
+            <span class="price-night" id="night-v4">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v4"></p>
+
+    </div>
+
+                        <button onclick="book('v4', 'FAMILY PARADISE')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Elite Family Getaway-->
+            <div class="room-card relative">
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="slider-v5">
+                        <img src="https://i.postimg.cc/GpxMV60J/6.png" class="slider-item">
+                        <img src="https://i.postimg.cc/L4G8nb7P/8999.png" class="slider-item">
+                    </div>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v5', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v5', 1)">❯</button>
+                </div>
+                <div class="p-8">
+                    <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-white uppercase tracking-tight">ELITE FAMILY GETAWAY</h3>
+                            <p class="text-xs font-bold text-[#ffffff] mt-1 mb-6 uppercase tracking-widest">ELITE FAMILY GETAWAY • package 4 - 8 ท่าน</p>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 border-t pt-6 border-slate-100">
+                                <div class="amenity-tag"><span class="fac-label">Room</span><span class="fac-value">( Family Suite Balcony )</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">3 Meals Included</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Seafood Voucher ฿8,000</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">1 Hr Thai Massage</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Two free drinks per person (Alternative Beverage Available)</span></div>
+                                <div class="amenity-tag"><span class="fac-label">Privileges</span><span class="fac-value">Choose four activity (travel accident insurance included)</span></div>
+                            </div>
+
+                            <!-- Extra Bed -->
+                            <div class="extra-bed-section">
+                                <div class="extra-bed-label">( มีเตียงเสริมให้ฟรี 4 เตียง )</div>
+                                <div class="flex items-center gap-4">
+                                    <div class="extra-bed-controls">
+                                        <button class="bed-btn" onclick="changeBed('v5', -1)" id="bed-minus-v5" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v5">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v5', 1)" id="bed-plus-v5">+</button>
+                                    </div>
+                                    <div>
+                                        <div class="extra-bed-info">ฟรี 4 เตียง</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v5">฿0 / คืน</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 items-end">
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
+                                <select id="guest-v5" onchange="updatePrice('v5')" class="select-input">
+                                    <option value="8999">4 - 8 ท่าน 8,999.-</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v5" onchange="updatePrice('v5')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v5" onchange="updatePrice('v5')" class="date-input"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+    <div>
+
+        <div class="price-box">
+            <span class="price-main" id="price-v5">
+                ฿8,999
+            </span>
+
+            <span class="price-night" id="night-v5">
+                / Night
+            </span>
+        </div>
+
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v5"></p>
+
+    </div>
+
+                        <button onclick="book('v5', 'Elite Family Getaway')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                    </div>
+                </div>
+            </div>
+
             <!-- 🌊 Deluxe Room King Bed-->
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF</div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v1">
+                    <div class="slider-wrapper" id="slider-v6">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327246/1327246/80a051a9-fb3f-416b-9cb9-13b544ea54e8.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327245/1327245/8f080ba4-706e-4a8a-8cd7-43934399368f.png?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327243/1327243/8e7ea188-2419-459c-93e9-1c72ae07b017.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -352,8 +722,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327244/1327244/635fe3c4-14d9-4268-83ca-4dbc492e4e32.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327242/1327242/75152707-a3be-4fea-896b-1b2db8350c3a.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v1', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v1', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v6', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v6', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -375,13 +745,13 @@ input{
                                 <div class="extra-bed-label">เพิ่มจำนวนต่อคืน(คืนละ ฿2,700)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v1', -1)" id="bed-minus-v1" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v1">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v1', 1)" id="bed-plus-v1">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v6', -1)" id="bed-minus-v6" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v6">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v6', 1)" id="bed-plus-v6">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v1">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v6">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
@@ -389,33 +759,33 @@ input{
                         
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v1" onchange="updatePrice('v1')" class="select-input">
+                                <select id="guest-v6" onchange="updatePrice('v6')" class="select-input">
                                     <option value="1980">2 ท่าน 1,980.-</option>
                                     <option value="2480">3 ท่าน 2,480.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v1" onchange="updatePrice('v1')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v1" onchange="updatePrice('v1')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v6" onchange="updatePrice('v6')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v6" onchange="updatePrice('v6')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between mt-6">
     <div>
 
         <div class="price-box">
-            <span class="price-main" id="price-v1">
+            <span class="price-main" id="price-v6">
                 ฿1,980
             </span>
 
-            <span class="price-night" id="night-v1">
+            <span class="price-night" id="night-v6">
                 / Night
             </span>
         </div>
 
-        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v1"></p>
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v6"></p>
 
     </div>
 
-                        <button onclick="book('v1', '🌊 Deluxe Room King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v6', '🌊 Deluxe Room King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -424,7 +794,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF</div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v2">
+                    <div class="slider-wrapper" id="slider-v7">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327257/1327257/dc61a9d3-977c-435a-bd87-030ac97a3bcc.png?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327256/1327256/8a5edf4d-f5fc-4ba6-8a07-54631a638b0b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327255/1327255/735e8220-52c3-45a6-9618-23934e625728.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
@@ -432,8 +802,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327253/1327253/d6090551-ccbe-445a-af76-378669855fac.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327254/1327254/c9476d02-c50a-41a3-b3c6-795774a6999b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v2', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v2', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v7', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v7', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -455,46 +825,46 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 3 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v2', -1)" id="bed-minus-v2" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v2">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v2', 1)" id="bed-plus-v2">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v7', -1)" id="bed-minus-v7" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v7">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v7', 1)" id="bed-plus-v7">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v2">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v7">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v2" onchange="updatePrice('v2')" class="select-input">
+                                <select id="guest-v7" onchange="updatePrice('v7')" class="select-input">
                                     <option value="1980">2 ท่าน 1,980.-</option>
                                     <option value="2480">3 ท่าน 2,480.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v2" onchange="updatePrice('v2')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v2" onchange="updatePrice('v2')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v7" onchange="updatePrice('v7')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v7" onchange="updatePrice('v7')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between mt-6">
     <div>
 
         <div class="price-box">
-            <span class="price-main" id="price-v2">
+            <span class="price-main" id="price-v7">
                 ฿1,980
             </span>
 
-            <span class="price-night" id="night-v2">
+            <span class="price-night" id="night-v7">
                 / Night
             </span>
         </div>
 
-        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v2"></p>
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v7"></p>
 
     </div>
 
-                        <button onclick="book('v2', '🌊 Deluxe Room Twin Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v7', '🌊 Deluxe Room Twin Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -503,15 +873,15 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v3">
+                    <div class="slider-wrapper" id="slider-v8">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327262/1327262/fe5fcb4d-6e4b-47ca-b133-6805a2613cf4.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327260/1327260/942b31e9-ce11-4346-b4ca-a3418ac63d01.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327259/1327259/0732d195-058f-4846-932e-887eaf5e978b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327261/1327261/64117641-8148-49ec-9ddc-9765bfeb765a.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/901811/901811/ee689488-08fa-44e3-b286-cfee795f5c65.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v3', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v3', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v8', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v8', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -533,46 +903,46 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v3', -1)" id="bed-minus-v3" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v3">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v3', 1)" id="bed-plus-v3">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v8', -1)" id="bed-minus-v8" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v8">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v8', 1)" id="bed-plus-v8">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v3">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v8">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v3" onchange="updatePrice('v3')" class="select-input">
+                                <select id="guest-v8" onchange="updatePrice('v8')" class="select-input">
                                     <option value="2280">2 ท่าน 2,280.-</option>
                                     <option value="2790">3 ท่าน 2,790.-</option>
                                     <option value="3280">4 ท่าน 3,280.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v3" onchange="updatePrice('v3')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v3" onchange="updatePrice('v3')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v8" onchange="updatePrice('v8')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v8" onchange="updatePrice('v8')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between mt-6">
     <div>
 
         <div class="price-box">
-            <span class="price-main" id="price-v3">
+            <span class="price-main" id="price-v8">
                 ฿2,280
             </span>
 
-            <span class="price-night" id="night-v3">
+            <span class="price-night" id="night-v8">
                 / Night
             </span>
         </div>
 
-        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v3"></p>
+        <p class="text-xs text-slate-300 mt-2" id="bed-summary-v8"></p>
 
     </div>
-                        <button onclick="book('v3', '🌅 Premier Room King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v8', '🌅 Premier Room King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -581,7 +951,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v4">
+                    <div class="slider-wrapper" id="slider-v9">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327286/1327286/bbf2f097-b7e6-43cf-91e0-99f001257d48.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327267/1327267/d714f6df-32c7-4bf3-930c-8f29f9a7556b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327268/1327268/e0077f5c-2a58-4fd8-896a-c660c45248a4.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -590,8 +960,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327265/1327265/c74abf65-2cd7-495e-ac0b-6844db6b739b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327263/1327263/95d8a2e9-377d-4bd9-962a-d0a4c31e5ba1.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v4', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v4', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v9', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v9', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -613,37 +983,37 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v4', -1)" id="bed-minus-v4" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v4">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v4', 1)" id="bed-plus-v4">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v9', -1)" id="bed-minus-v9" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v9">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v9', 1)" id="bed-plus-v9">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v4">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v9">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v4" onchange="updatePrice('v4')" class="select-input">
+                                <select id="guest-v9" onchange="updatePrice('v9')" class="select-input">
                                     <option value="2700">2 ท่าน 2,700.-</option>
                                     <option value="3200">3 ท่าน 3,200.-</option>
                                     <option value="3700">4 ท่าน 3,700.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v4" onchange="updatePrice('v4')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v4" onchange="updatePrice('v4')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v9" onchange="updatePrice('v9')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v9" onchange="updatePrice('v9')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-    <span class="price-main" id="price-v4">฿2,700</span>
+    <span class="price-main" id="price-v9">฿2,700</span>
     <span class="price-night">/ Night</span>
                         </div>
                         </div>
-                        <button onclick="book('v4', '✨ Premier Balcony King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v9', '✨ Premier Balcony King Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -652,7 +1022,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v5">
+                    <div class="slider-wrapper" id="slider-v10">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327272/1327272/8ac6aee5-9785-4405-8401-c4c02abf7798.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/901819/901819/a6a79549-f6ea-4b3d-bd9d-6ad3d57c318d.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327273/1327273/11b78cf7-f810-4a15-9457-6c3d3095f9bb.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
@@ -660,8 +1030,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327285/1327285/db8a0f00-fc2f-48a1-afd0-bae5a0e68cb4.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327269/1327269/cecdbf5d-7ce5-40c9-a6a5-9464cd6c9426.jpg?auto=format,compress&fit=crop&crop=entropy&w=1920&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v5', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v5', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v10', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v10', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -683,37 +1053,37 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v5', -1)" id="bed-minus-v5" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v5">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v5', 1)" id="bed-plus-v5">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v10', -1)" id="bed-minus-v10" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v10">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v10', 1)" id="bed-plus-v10">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v5">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v10">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v5" onchange="updatePrice('v5')" class="select-input">
+                                <select id="guest-v10" onchange="updatePrice('v10')" class="select-input">
                                     <option value="2700">2 ท่าน 2,700.-</option>
                                     <option value="3200">3 ท่าน 3,200.-</option>
                                     <option value="3700">4 ท่าน 3,700.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v5" onchange="updatePrice('v5')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v5" onchange="updatePrice('v5')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v10" onchange="updatePrice('v10')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v10" onchange="updatePrice('v10')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-    <span class="price-main" id="price-v5">฿2,700</span>
+    <span class="price-main" id="price-v10">฿2,700</span>
     <span class="price-night">/ Night</span>
                         </div>
                         </div>
-                        <button onclick="book('v5', '✨ Premier Balcony Twin Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v10', '✨ Premier Balcony Twin Bed')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -722,7 +1092,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge">SAVE 40%</div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v6">
+                    <div class="slider-wrapper" id="slider-v11">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327275/1327275/50e9cf5d-a6cf-478b-9ff1-6951f9efc4b9.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327274/1327274/4c11ed77-3084-438b-9ff6-9e7b9117ede9.png?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327276/1327276/cf75b712-6fd5-4461-baab-50980defd02f.png?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -731,8 +1101,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327280/1327280/7e5f59d2-9b27-41be-96ab-916c9f1b05c6.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327279/1327279/ffdea73c-9c8f-4619-b061-2624d2b89f37.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v6', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v6', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v11', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v11', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -753,37 +1123,37 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v6', -1)" id="bed-minus-v6" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v6">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v6', 1)" id="bed-plus-v6">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v11', -1)" id="bed-minus-v11" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v11">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v11', 1)" id="bed-plus-v11">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v6">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v11">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v6" onchange="updatePrice('v6')" class="select-input">
+                                <select id="guest-v11" onchange="updatePrice('v11')" class="select-input">
                                     <option value="3300">2 ท่าน 3,300.-</option>
                                     <option value="3800">3 ท่าน 3,800.-</option>
                                     <option value="4300">4 ท่าน 4,300.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v6" onchange="updatePrice('v6')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v6" onchange="updatePrice('v6')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v11" onchange="updatePrice('v11')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v11" onchange="updatePrice('v11')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-    <span class="price-main" id="price-v6">฿3,300</span>
+    <span class="price-main" id="price-v11">฿3,300</span>
     <span class="price-night">/ Night</span>
                         </div>
                         </div>
-                        <button onclick="book('v6', '🚀 Junior Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v11', '🚀 Junior Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -792,7 +1162,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v7">
+                    <div class="slider-wrapper" id="slider-v12">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327291/1327291/5ed35a68-64ab-4e3c-8f7c-6359325dbd54.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327288/1327288/2f7f59c9-1e12-453a-a618-55a1094a312e.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/901881/901881/a8117ff7-c2f7-466e-b95f-cc2bbe06a637.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -805,8 +1175,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327292/1327292/dcbf5f5d-ba60-473c-98ca-f2a2f306ca7c.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327293/1327293/c0c08d69-1472-41f8-82c2-22f2559de149.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v7', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v7', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v12', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v12', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -828,38 +1198,38 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v7', -1)" id="bed-minus-v7" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v7">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v7', 1)" id="bed-plus-v7">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v12', -1)" id="bed-minus-v12" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v12">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v12', 1)" id="bed-plus-v12">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v7">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v12">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v7" onchange="updatePrice('v7')" class="select-input">
+                                <select id="guest-v12" onchange="updatePrice('v12')" class="select-input">
                                     <option value="3840">2 ท่าน 3,840.-</option>
                                     <option value="4340">3 ท่าน 4,340.-</option>
                                     <option value="4840">4 ท่าน 4,840.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v7" onchange="updatePrice('v7')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v7" onchange="updatePrice('v7')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v12" onchange="updatePrice('v12')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v12" onchange="updatePrice('v12')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-                                <span class="price-main" id="price-v7">฿3,840</span>
+                                <span class="price-main" id="price-v12">฿3,840</span>
                                 <span class="price-night">/ Night</span>
                             </div>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v7"></p>
+                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v12"></p>
                         </div>
-                        <button onclick="book('v7', '👑 Marina Front Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v12', '👑 Marina Front Suite')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -868,7 +1238,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v8">
+                    <div class="slider-wrapper" id="slider-v13">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327297/1327297/29da57dc-c3b7-4817-8174-eeb3047bd7da.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327294/1327294/a57cf514-bd9e-4be7-bb78-f86f3b16f05b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327295/1327295/acfb071c-1ceb-4a8e-b034-a40ed3ff6d65.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -878,8 +1248,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327301/1327301/931fe534-6b8a-4e52-8745-ef41263f2c1b.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327299/1327299/b13d25c2-c444-4737-9b25-29260958ecde.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v8', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v8', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v13', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v13', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -901,38 +1271,38 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v8', -1)" id="bed-minus-v8" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v8">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v8', 1)" id="bed-plus-v8">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v13', -1)" id="bed-minus-v13" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v13">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v13', 1)" id="bed-plus-v13">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v8">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v13">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v8" onchange="updatePrice('v8')" class="select-input">
+                                <select id="guest-v13" onchange="updatePrice('v13')" class="select-input">
                                     <option value="4200">4 ท่าน 4,200.-</option>
                                     <option value="4700">5 ท่าน 4,700.-</option>
                                     <option value="5200">6 ท่าน 5,200.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v6" onchange="updatePrice('v6')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v6" onchange="updatePrice('v6')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v13" onchange="updatePrice('v13')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v13" onchange="updatePrice('v13')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-                                <span class="price-main" id="price-v6">฿4,200</span>
+                                <span class="price-main" id="price-v13">฿4,200</span>
                                 <span class="price-night">/ Night</span>
                             </div>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v6"></p>
+                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v13"></p>
                         </div>
-                        <button onclick="book('v8', '🌕 2 Bedroom Suite (1 King & 2 Twin)')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v13', '🌕 2 Bedroom Suite (1 King & 2 Twin)')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -941,7 +1311,7 @@ input{
             <div class="room-card relative">
                 <div class="absolute top-6 right-6 discount-badge"> 40% - OFF </div>
                 <div class="slider-container">
-                    <div class="slider-wrapper" id="slider-v9">
+                    <div class="slider-wrapper" id="slider-v14">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327304/1327304/ce08c5f5-e4e9-40ee-bcef-73fa7d8923ff.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327303/1327303/35829d03-c922-4d14-a852-121a140bb0fa.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327302/1327302/a59a3d7e-9e00-4797-92b9-05f2f22ed453.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
@@ -951,8 +1321,8 @@ input{
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327307/1327307/4474fca9-b14f-4737-a2ec-a77263789c20.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                         <img src="https://tbb-prod-apac.imgix.net/attachments/room_type_photos/images/1327309/1327309/971d0d50-1b2d-47f7-9b9b-5a5b14fde62c.jpg?auto=format,compress&fit=crop&crop=entropy&w=1189&q=75" class="slider-item">
                     </div>
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v9', -1)">❮</button>
-                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v9', 1)">❯</button>
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v14', -1)">❮</button>
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 nav-btn" onclick="moveSlide('v14', 1)">❯</button>
                 </div>
                 <div class="p-8">
                     <div class="flex flex-col md:flex-row justify-between gap-6 mb-8">
@@ -974,38 +1344,38 @@ input{
                                 <div class="extra-bed-label">🛏️ เสริมเตียง (สูงสุด 4 ท่าน • ท่านละ ฿500)</div>
                                 <div class="flex items-center gap-4">
                                     <div class="extra-bed-controls">
-                                        <button class="bed-btn" onclick="changeBed('v9', -1)" id="bed-minus-v9" disabled>−</button>
-                                        <div class="bed-count" id="bed-count-v9">0</div>
-                                        <button class="bed-btn" onclick="changeBed('v9', 1)" id="bed-plus-v9">+</button>
+                                        <button class="bed-btn" onclick="changeBed('v14', -1)" id="bed-minus-v14" disabled>−</button>
+                                        <div class="bed-count" id="bed-count-v14">0</div>
+                                        <button class="bed-btn" onclick="changeBed('v14', 1)" id="bed-plus-v14">+</button>
                                     </div>
                                     <div>
                                         <div class="extra-bed-info">เพิ่มเตียงเสริมสำหรับแขกเพิ่มเติม</div>
-                                        <div class="extra-bed-cost" id="bed-cost-v9">฿0 / คืน</div>
+                                        <div class="extra-bed-cost" id="bed-cost-v14">฿0 / คืน</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-3 items-end">
                             <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">จำนวนท่าน</label>
-                                <select id="guest-v9" onchange="updatePrice('v9')" class="select-input">
+                                <select id="guest-v14" onchange="updatePrice('v14')" class="select-input">
                                     <option value="4680">4 ท่าน 4,680.-</option>
                                     <option value="5180">5 ท่าน 5,180.-</option>
                                     <option value="5680">6 ท่าน 5,680.-</option>
                                 </select>
                             </div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v9" onchange="updatePrice('v9')" class="date-input"></div>
-                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v9" onchange="updatePrice('v9')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-in</label><input type="date" id="in-v14" onchange="updatePrice('v14')" class="date-input"></div>
+                            <div class="flex flex-col"><label class="text-[9px] font-bold text-slate-400 uppercase">Check-out</label><input type="date" id="out-v14" onchange="updatePrice('v14')" class="date-input"></div>
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
                             <div class="price-box">
-                                <span class="price-main" id="price-v9">฿4,680</span>
+                                <span class="price-main" id="price-v14">฿4,680</span>
                                 <span class="price-night">/ Night</span>
                             </div>
-                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v9"></p>
+                            <p class="text-xs text-slate-400 mt-1" id="bed-summary-v14"></p>
                         </div>
-                        <button onclick="book('v9', 'Family Suite Balcony')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
+                        <button onclick="book('v14', 'Family Suite Balcony')" class="btn-booking text-white px-12 py-4 font-bold text-sm uppercase tracking-widest shadow-lg">Reserve Now</button>
                     </div>
                 </div>
             </div>
@@ -1054,7 +1424,7 @@ input{
 
     <script>
         // --- Slider Logic ---
-        const slideIndexes = { v1: 0, v2: 0, v3: 0, v4: 0, v5: 0, v6: 0, v7: 0, v8: 0, v9: 0 };
+        const slideIndexes = { v1: 0, v2: 0, v3: 0, v4: 0, v5: 0, v6: 0, v7: 0, v8: 0, v9: 0, v10: 0, v11: 0, v12: 0, v13: 0, v14: 0 };
         function moveSlide(id, step) {
             const wrapper = document.getElementById('slider-' + id);
             if (!wrapper) return; 
@@ -1065,8 +1435,8 @@ input{
         }
 
         // --- Extra Bed Config ---
-        const extraBedMax = {v1: 2, v2: 3, v3: 4, v4: 5, v5: 6, v6: 7, v7: 7, v8: 8, v9: 9 };
-        const extraBedCounts = { v1: 0, v2: 0, v3: 0, v4: 0, v5: 0, v6: 0, v7: 0, v8: 0, v9: 0 };
+        const extraBedMax = {v1: 0, v2: 0, v3: 0, v4: 0, v5: 0, v6: 1, v7: 1, v8: 1, v9: 1, v10: 1, v11: 1, v12: 1, v13: 2, v14: 2 };
+        const extraBedCounts = { v1: 0, v2: 0, v3: 0, v4: 0, v5: 0, v6: 0, v7: 0, v8: 0, v9: 0, v10: 0, v11: 0, v12: 0, v13: 0, v14: 0 };
         const extraBedPricePerPerson = 500;
 
         function changeBed(id, delta) {
@@ -1115,32 +1485,64 @@ input{
             const cin = document.getElementById('in-' + id).value;
             const cout = document.getElementById('out-' + id).value;
             
-            const villaNames = { 
-                v1: 'Deluxe Room King Bed', 
-                v2: 'Deluxe Room Twin Bed', 
-                v3: 'Premier Room King Bed', 
-                v4: "Premier Balcony King Bed",
-                v5: "Premier Balcony Twin Bed",
-                v6: "Junior Suite King Bed",
-                v7: "Marina Front Suite",
-                v8: "2 Bedroom Suite (1 King & 2 Twin)",
-                v9: "Family Suite Balcony"
+            const roomNames = { 
+                v1: 'SEA OF LOVE', 
+                v2: 'SMILE OF THE SEA', 
+                v3: 'SEASIDE SERENITY', 
+                v4: 'FAMILY PARADISE', 
+                v5: "ELITE FAMILY GETAWAY",
+                v6: "Deluxe Room King Bed",
+                v7: 'Deluxe Room Twin Bed',
+                v8: 'Premier Room King Bed', 
+                v9: 'Premier Balcony King Bed', 
+                v10: "Premier Balcony Twin Bed",
+                v11: "Junior Suite King Bed",
+                v12: "Marina Front Suite",
+                v13: "2 Bedroom Suite (1 King & 2 Twin)",
+                v14: "Family Suite Balcony",
             };
-            const name = villaNames[id];
+            const name = roomNames[id];
 
             let nights = 0;
-            if (cin && cout) {
-                nights = Math.ceil((new Date(cout) - new Date(cin)) / 86400000);
-            }
+            nights = Math.ceil((new Date(cout) - new Date(cin)) / 86400000);
 
-            const currentTotal = nights > 0 ? (nights * totalPerNight) : totalPerNight;
-            document.getElementById('price-' + id).innerText = `฿${currentTotal.toLocaleString()}`;
-            
-            if (nights > 0) {
-                document.getElementById('night-' + id).innerText = `/ ${nights} คืน`;
-            } else {
-                document.getElementById('night-' + id).innerText = `/ Night`;
-            }
+if (
+    ['v1','v2','v3','v4','v5'].includes(id)
+    && nights > 2
+){
+
+    alert('จองได้สูงสุด 2 คืน');
+
+    nights = 2;
+
+    let d = new Date(cin);
+
+    d.setDate(d.getDate() + 2);
+
+    document.getElementById('out-' + id).value =
+        d.toISOString().split('T')[0];
+}
+
+            let currentTotal = 0;
+
+// v1-v5 ราคาเดิม ไม่คูณคืน
+if (
+    ['v1','v2','v3','v4','v5'].includes(id)
+){
+
+    currentTotal = parseInt(totalPerNight);
+
+} else {
+
+    // ห้องอื่นคิดตามคืน
+    currentTotal =
+        nights > 0
+        ? parseInt(totalPerNight) * nights
+        : parseInt(totalPerNight);
+}
+
+document.getElementById('price-' + id).innerText =
+    `฿${currentTotal.toLocaleString()}`;
 
             // Show bed summary under price
             const bedSummaryEl = document.getElementById('bed-summary-' + id);
@@ -1176,7 +1578,7 @@ input{
         }
 
         function updateCartIfBooked(id) {
-            const villaNames = { v1: 'Deluxe Room King Bed', v2: 'Deluxe Room King Bed Twin Bed', v3: 'Premier Room King Bed', v4: "Premier Balcony King Bed", v5: "Premier Balcony Twin Bed", v6: "Junior Suite", v7: "Marina Front Suite", v8: "2 Bedroom Suite (1 King & 2 Twin)", v9: "Family Suite Balcony" };
+            const villaNames = { v1: 'LUXURY HIDEAWAY', v2: 'SMILE OF THE SEA', v3: 'SEASIDE SERENITY', v4: "Family Paradise", v5: "Elite Family Getaway", v6: "Deluxe Room King Bed", v7: "Deluxe Room Twin Bed", v8: "Premier Room King Bed", v9: "Premier Balcony King Bed", v10: "Premier Balcony Twin Bed", v11: "Junior Suite", v12: "Marina Front Suite", v13: "2 Bedroom Suite (1 King & 2 Twin)", v14: "Family Suite Balcony" };
             const name = villaNames[id];
             const existingIndex = bookingCart.findIndex(item => item.RoomName === name);
             if (existingIndex > -1) {
@@ -1204,7 +1606,20 @@ input{
             const nights = Math.ceil((new Date(cout) - new Date(cin)) / 86400000);
             if (nights <= 0) return alert("วันที่ Check-out ต้องหลังจาก Check-in!");
 
-            const totalForThisRoom = nights * totalPerNight;
+            let totalForThisRoom;
+
+// v1-v5 ราคาเดิม
+if (
+    ['v1','v2','v3','v4','v5'].includes(id)
+){
+
+    totalForThisRoom = totalPerNight;
+
+} else {
+
+    // ห้องอื่นคิดตามคืน
+    totalForThisRoom = nights * totalPerNight;
+}
             
             const existingRoomIndex = bookingCart.findIndex(item => item.RoomName === name);
             const roomData = {
